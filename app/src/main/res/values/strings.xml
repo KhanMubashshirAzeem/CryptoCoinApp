@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CryptoCoinApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="not_found_any_data">Not found any data</string>
+    <string name="empty_watch_list">Empty Watch list</string>
+</resources>
