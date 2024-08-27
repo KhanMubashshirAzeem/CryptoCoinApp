@@ -1,4 +1,4 @@
-package com.example.cryptocoinapp.fragment.adapter
+package com.example.cryptocoinapp.adapter
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

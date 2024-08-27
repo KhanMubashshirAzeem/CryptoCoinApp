@@ -12,10 +12,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.transition.Visibility
 import androidx.viewpager2.widget.ViewPager2
 import com.example.cryptocoinapp.databinding.FragmentHomeBinding
-import com.example.cryptocoinapp.fragment.adapter.TopLossGainPagerAdapter
-import com.example.cryptocoinapp.fragment.adapter.TopMarketAdapter
-import com.example.cryptocoinapp.fragment.api.ApiInterface
-import com.example.cryptocoinapp.fragment.api.ApiUtilities
+import com.example.cryptocoinapp.adapter.TopLossGainPagerAdapter
+import com.example.cryptocoinapp.adapter.TopMarketAdapter
+import com.example.cryptocoinapp.api.ApiInterface
+import com.example.cryptocoinapp.api.ApiUtilities
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -86,9 +86,9 @@ class HomeFragment : Fragment() {
         TabLayoutMediator(binding.tabLayout, binding.contentViewPager){
                 tab, position ->
             val title = if (position == 0){
-                "Top Gainers"
+                "Top 10 Gainers"
             } else {
-                "Top Losers"
+                "Top 10 Losers"
             }
             tab.text = title
         }.attach()

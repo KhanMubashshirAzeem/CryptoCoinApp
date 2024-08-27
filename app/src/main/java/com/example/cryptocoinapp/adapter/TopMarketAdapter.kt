@@ -1,4 +1,4 @@
-package com.example.cryptocoinapp.fragment.adapter
+package com.example.cryptocoinapp.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

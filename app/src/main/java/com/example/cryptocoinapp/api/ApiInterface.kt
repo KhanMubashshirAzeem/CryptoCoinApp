@@ -1,4 +1,4 @@
-package com.example.cryptocoinapp.fragment.api
+package com.example.cryptocoinapp.api
 
 import retrofit2.Response
 import retrofit2.http.GET

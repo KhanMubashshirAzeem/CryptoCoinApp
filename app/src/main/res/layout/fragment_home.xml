@@ -5,7 +5,7 @@
     android:id="@+id/homeFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/grayDark"
     tools:context=".fragment.HomeFragment">
 
     <androidx.cardview.widget.CardView
@@ -105,7 +105,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tabIndicator="@null"
             app:tabSelectedTextColor="@color/white"
-            app:tabTextColor="@color/grayLight" />
+            app:tabTextColor="@color/white" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/contentViewPager"

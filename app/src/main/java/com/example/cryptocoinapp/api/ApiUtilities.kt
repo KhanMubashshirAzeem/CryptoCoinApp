@@ -1,4 +1,4 @@
-package com.example.cryptocoinapp.fragment.api
+package com.example.cryptocoinapp.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

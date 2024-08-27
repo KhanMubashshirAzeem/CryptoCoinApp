@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.example.cryptocoinapp.R
 import com.example.cryptocoinapp.databinding.FragmentTopGainLossBinding
-import com.example.cryptocoinapp.fragment.adapter.MarketAdapter
-import com.example.cryptocoinapp.fragment.api.ApiInterface
-import com.example.cryptocoinapp.fragment.api.ApiUtilities
+import com.example.cryptocoinapp.adapter.MarketAdapter
+import com.example.cryptocoinapp.api.ApiInterface
+import com.example.cryptocoinapp.api.ApiUtilities
 import com.example.cryptocoinapp.models.CryptoCurrency
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

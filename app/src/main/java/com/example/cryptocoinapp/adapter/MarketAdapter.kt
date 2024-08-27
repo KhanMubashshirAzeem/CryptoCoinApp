@@ -1,14 +1,17 @@
-package com.example.cryptocoinapp.fragment.adapter
+package com.example.cryptocoinapp.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.cryptocoinapp.R
 import com.example.cryptocoinapp.databinding.CurrencyItemLayoutBinding
+import com.example.cryptocoinapp.fragment.HomeFragment
+import com.example.cryptocoinapp.fragment.HomeFragmentDirections
 import com.example.cryptocoinapp.models.CryptoCurrency
 
 // Adapter for RecyclerView to display list of cryptocurrencies.
@@ -69,6 +72,13 @@ class MarketAdapter(private var context: Context, private var list: List<CryptoC
             )
             holder.binding.currencyChangeTextView.text = "${String.format("%.2f", percentChange)}%"
         }
+
+        holder.itemView.setOnClickListener {
+            findNavController(it).navigate(
+                HomeFragmentDirections.actionHomeFragmentToDetailFragment(item)
+            )
+        }
+
     }
 }
 
