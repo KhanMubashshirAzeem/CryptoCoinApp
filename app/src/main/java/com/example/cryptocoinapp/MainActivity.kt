@@ -1,6 +1,7 @@
 package com.example.cryptocoinapp
 
 import android.os.Bundle
+import android.view.View
 import android.widget.PopupMenu
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -33,4 +34,6 @@ class MainActivity : AppCompatActivity() {
         binding.smoothBottomBar.setupWithNavController(popupMenu.menu,navController)
 
     }
+
+    fun backButtonMethod(view: View) {}
 }

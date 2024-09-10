@@ -11,6 +11,8 @@ import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.transition.Visibility
 import androidx.viewpager2.widget.ViewPager2
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import com.example.cryptocoinapp.databinding.FragmentHomeBinding
 import com.example.cryptocoinapp.adapter.TopLossGainPagerAdapter
 import com.example.cryptocoinapp.adapter.TopMarketAdapter
@@ -39,6 +41,18 @@ class HomeFragment : Fragment() {
 
         // Set up the tab layout with ViewPager2 for switching between tabs.
         setTabLayout()
+
+        // Auto Image Slider
+        val imageList = ArrayList<SlideModel>()
+
+        imageList.add(SlideModel("https://www.shutterstock.com/image-vector/bitcoin-btc-cryptocurrency-golden-coin-600nw-2207300641.jpg","Bitcoin"))
+        imageList.add(SlideModel("https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2021/03/ethereum-1.jpeg","Ethereum"))
+        imageList.add(SlideModel("https://www.forbes.com/advisor/wp-content/uploads/2022/06/solana_logo.jpeg.jpg","Solana"))
+        imageList.add(SlideModel("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSmjriXVTZAiBRNGTJmA3KmlpVgi2YOgMkFA&s","Kaspa"))
+
+        binding.imageSlider.setImageList(imageList, ScaleTypes.FIT)
+
+
 
         // Return the root view of the fragment.
         return binding.root

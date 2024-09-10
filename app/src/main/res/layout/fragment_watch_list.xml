@@ -5,18 +5,32 @@
     android:id="@+id/watchListFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grayLight">
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:padding="8dp"
+        android:text="The Coin I Treasure Most"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="12sp"
         android:background="@drawable/market_content_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/watchlistRecyclerView"
@@ -29,17 +43,17 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:listitem="@layout/currency_item_layout"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/currency_item_layout">
 
         </androidx.recyclerview.widget.RecyclerView>
 
         <com.github.ybq.android.spinkit.SpinKitView
-            style="@style/SpinKitView.ThreeBounce"
             android:id="@+id/spinKitView"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
+            style="@style/SpinKitView.ThreeBounce"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:visibility="visible"
             app:SpinKit_Color="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -63,3 +77,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

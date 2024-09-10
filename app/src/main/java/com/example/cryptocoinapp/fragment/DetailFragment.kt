@@ -9,6 +9,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import com.example.cryptocoinapp.R
 import com.example.cryptocoinapp.databinding.FragmentDetailBinding
 import com.example.cryptocoinapp.databinding.FragmentWatchListBinding
@@ -31,8 +33,29 @@ class DetailFragment : Fragment() {
         loadChart(data)
         setButtonOnClick(data)
 
+        binding.addWatchlistButton
+
+        binding.backStackButton.setOnClickListener(View.OnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        })
+
+
+        // Auto Image Slider
+        val imageList = ArrayList<SlideModel>()
+
+        imageList.add(SlideModel("https://www.shutterstock.com/image-vector/bitcoin-btc-cryptocurrency-golden-coin-600nw-2207300641.jpg","Bitcoin"))
+        imageList.add(SlideModel("https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2021/03/ethereum-1.jpeg","Ethereum"))
+        imageList.add(SlideModel("https://www.forbes.com/advisor/wp-content/uploads/2022/06/solana_logo.jpeg.jpg","Solana"))
+        imageList.add(SlideModel("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSmjriXVTZAiBRNGTJmA3KmlpVgi2YOgMkFA&s","Kaspa"))
+
+        binding.imageSlider.setImageList(imageList, ScaleTypes.FIT)
+
+
+
         return binding.root
     }
+
+
 
 
     private fun setUpDetails(data: CryptoCurrency) {
@@ -137,7 +160,12 @@ class DetailFragment : Fragment() {
         binding.detailChartWebView.setLayerType(View.LAYER_TYPE_SOFTWARE, null)
 
         binding.detailChartWebView.loadUrl(
-            "https://s.tradingview.com/widgetembed/?frameElementId=tradingview_76d87&symbol" + item.data.toString() + "USD&interval=" + s + "&hidesidetoolbar=1&hidetoptoolbar=" + "1&symboledit=1&saveimage=1&toolbarbg=F1F3F6&studies" + "=[]&hideideas=1&theme=Dark&style=1&timezone=Etc%2FUTC&studies_overrides=" + "{}&overrides={}&enabled_features=" + "[]&disabled_features=[]&locale=en&utm_source=coinmarketcap" + ".com&utm_medium=widget&utm_campaign=chart&utm_term=BTCUSDT"
+            "https://s.tradingview.com/widgetembed/?frameElementId=tradingview_76d87&symbol"
+                    + item.data.toString() + "USD&interval=" + s + "&hidesidetoolbar=1&hidetoptoolbar="
+                    + "1&symboledit=1&saveimage=1&toolbarbg=F1F3F6&studies"
+                    + "=[]&hideideas=1&theme=Dark&style=1&timezone=Etc%2FUTC&studies_overrides="
+                    + "{}&overrides={}&enabled_features=" + "[]&disabled_features=[]&locale=en&utm_source=coinmarketcap"
+                    + ".com&utm_medium=widget&utm_campaign=chart&utm_term=BTCUSDT"
         )
     }
 
@@ -154,5 +182,6 @@ class DetailFragment : Fragment() {
         fourHour.background = null
         oneHour.background = null
     }
+
 
 }

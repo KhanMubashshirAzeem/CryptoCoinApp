@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CryptoCoinApp</string>
+    <string name="app_name">CryptoCoin</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="not_found_any_data">Not found any data</string>

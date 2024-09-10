@@ -15,17 +15,27 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/grayDark"
         app:cardCornerRadius="12dp"
-        app:cardElevation="8dp"
+        app:cardElevation="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/imageSlider"
             android:layout_width="match_parent"
-            android:layout_height="182dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/banner" />
+            android:layout_height="210dp"
+            app:iss_auto_cycle="true"
+            app:iss_corner_radius="5"
+            app:iss_delay="0"
+            app:iss_error_image="@android:color/darker_gray"
+            app:iss_period="1300"
+            app:iss_placeholder="@android:color/darker_gray"
+            app:iss_selected_dot="@drawable/default_selected_dot"
+            app:iss_unselected_dot="@drawable/default_unselected_dot"
+            tools:ignore="MissingConstraints"
+            />
 
     </androidx.cardview.widget.CardView>
 

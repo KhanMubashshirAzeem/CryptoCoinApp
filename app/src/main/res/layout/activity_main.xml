@@ -27,6 +27,7 @@
         android:elevation="12dp"
         app:backgroundColor="@color/black"
         app:iconMargin="8dp"
+        app:itemFontFamily="@font/baskervville_sc_regular"
         app:indicatorColor="@color/offblack"
         app:iconSize="24sp"
         android:padding="8dp"

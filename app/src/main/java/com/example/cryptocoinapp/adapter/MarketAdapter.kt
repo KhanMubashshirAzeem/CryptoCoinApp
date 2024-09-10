@@ -1,3 +1,4 @@
+
 package com.example.cryptocoinapp.adapter
 
 import android.content.Context
@@ -10,12 +11,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.cryptocoinapp.R
 import com.example.cryptocoinapp.databinding.CurrencyItemLayoutBinding
-import com.example.cryptocoinapp.fragment.HomeFragment
 import com.example.cryptocoinapp.fragment.HomeFragmentDirections
+import com.example.cryptocoinapp.fragment.MarketFragmentDirections
+import com.example.cryptocoinapp.fragment.WatchListFragmentDirections
 import com.example.cryptocoinapp.models.CryptoCurrency
 
 // Adapter for RecyclerView to display list of cryptocurrencies.
-class MarketAdapter(private var context: Context, private var list: List<CryptoCurrency>) :
+class MarketAdapter(private var context: Context, private var list: List<CryptoCurrency>, var type : String) :
     RecyclerView.Adapter<MarketAdapter.MarketViewHolder>() {
 
     // ViewHolder class to hold views for each item in the list.
@@ -74,11 +76,31 @@ class MarketAdapter(private var context: Context, private var list: List<CryptoC
         }
 
         holder.itemView.setOnClickListener {
-            findNavController(it).navigate(
-                HomeFragmentDirections.actionHomeFragmentToDetailFragment(item)
-            )
+
+            if (type == "home"){
+                findNavController(it).navigate(
+                    HomeFragmentDirections.actionHomeFragmentToDetailFragment(item)
+                )
+            }
+            else if (type == "market"){
+                findNavController(it).navigate(
+                    MarketFragmentDirections.actionMarketFragmentToDetailFragment(item)
+                )
+            }
+            else if (type == "watchList"){
+                findNavController(it).navigate(
+                    WatchListFragmentDirections.actionWatchListFragmentToDetailFragment(item)
+                )
+            }
         }
 
     }
+
+    fun updateData(dataItem : List<CryptoCurrency>){
+        list = dataItem
+        notifyDataSetChanged()
+    }
+
 }
+
 

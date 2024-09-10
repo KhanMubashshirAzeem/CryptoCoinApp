@@ -68,5 +68,7 @@ dependencies {
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.16.0")
 
+    // Auto Slider
+    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.0")
 
 }
