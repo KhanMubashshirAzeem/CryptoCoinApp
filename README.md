@@ -21,5 +21,10 @@ Utilized Lifecycle Coroutines for smooth asynchronous operations and Glide for e
         <img src="https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Button" height="50">
       </a>
     </td>
+     <td>
+      <a href="https://www.naukri.com/mnjuser/profile?id=&altresid">
+        <img src="https://play-lh.googleusercontent.com/76gEFhQto5xMHr2Qf8nWLvm1s0O60clhkwHvxQDSeI3hthf7Zs05JJQeyg5H347DGQ" alt="Naukri Button" width="50" height="50">
+      </a>
+    </td>
   </tr>
 </table>
