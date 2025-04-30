@@ -71,4 +71,7 @@ dependencies {
     // Auto Slider
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.0")
 
+    // Biometric
+    implementation ("androidx.biometric:biometric:1.2.0-alpha05")
+
 }
